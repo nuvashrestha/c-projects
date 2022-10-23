@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+    
+int main () {
+    
+
+    char operator;
+    double first_num, second_num;
+    
+    
+    printf("Enter the operator you would like to use (+,-,*,/) : ");
+    scanf("%c", &operator);
+
+    printf("Enter the two numbers with a space in between: ");
+    scanf("%lf %lf", &first_num, &second_num);
+
+    switch (operator)
+    {
+    case '+':
+        printf("%.2lf + %.2lf = %.2lf", first_num, second_num, (first_num + second_num) );
+        break;
+
+    case '-':
+        printf("%.2lf - %.2lf = %.2lf", first_num, second_num, (first_num - second_num) );
+        break;
+
+    case '*':
+        printf("%.2lf * %.2lf = %.2lf", first_num, second_num, (first_num * second_num) );
+        break;
+
+    case '/':
+        if(second != 0.0)
+            printf("%.2lf / %.2lf = %.2lf", first_num, second_num, (first_num / second_num) );
+        else
+            printf("You cannot divide by 0!");
+        break;
+
+    default:
+        printf("Invalid Operator!");
+    }
+
+    return 0;
+}
